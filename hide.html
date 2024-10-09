@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #addTaskBtn{
+        background-color: rgb(248, 167, 16);
+        padding : 10px;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    
+    
+<div >
+  <p id="textField" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos explicabo repudiandae officiis reprehenderit. Nisi blanditiis ratione a mollitia asperiores vitae labore laborum! Dolores aperiam blanditiis ex culpa, perspiciatis id dolorem?.</p>
+  <button id="addTaskBtn" >Click here</button>
+</div>
+
+</body>
+
+<script>
+
+    const textField = document.getElementById("textField");
+     textField.style.display="none";
+  addTaskBtn.addEventListener('click',function() {
+    textField.style.display = "block";
+        const para = document.createElement("p");
+        para.textContent =textField;
+})
+     
+</script>
+</html>

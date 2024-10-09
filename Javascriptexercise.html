@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let num=21
+    if(num%2==0)
+{
+    console.log("Given number is Even")
+}else {
+    console.log("Given number is Odd")
+}
+let i=13
+if (i%7==0){
+    console.log("Given number is divisiable by 7")
+} else {
+    console.log("Given number is not divisiable by 7")
+}
+let number = 25
+if(number%5==0)
+{
+    console.log("Hello")
+}else{
+    console.log("Bye")
+}
+let unit = 300
+if(unit<=100){
+    console.log("No charge")
+}else if(unit>100 || unit<=199){
+    let unit1=unit - 100
+    let u=unit1*5
+   console.log("EB bill", u)
+}else if(unit>=200){
+    let unit1 = unit - 100
+    let unit2 = unit1 - 100
+    let last = unit1 - unit2
+    let total = (unit2 * 10) + (last * 5)
+  console.log("EB bill", total)
+}
+let a =378
+  let b=a%10
+  console.log("Last digit of a number is:", b)
+let A = 566
+let B = A%10
+if(B%3==0){
+    console.log("Given last digit of a number is divisible by 3")
+} else {
+    console.log("Given last digit of a number is not divisible by 3")
+
+}
+let numbers="8"
+switch(numbers){
+    case "1":
+        console.log("Monday")
+        break;
+    case "2":
+        console.log("Tuesday")
+        break;
+        case "3":
+        console.log("Wednesday")
+        break;
+        case "4":
+        console.log("Thusday")
+        break;
+        case "5":
+        console.log("Friday")
+        break;
+        case "6":
+        console.log("Saturday")
+        break;
+        case "7":
+        console.log("Sunday")
+        break;
+        default:
+            console.log("Not available")
+}
+// leap year
+   let year = 1700;
+   if ((year%4==0) && (year%100!=0) || (year%400==0)) {
+    console.log("Given year is leap year :" , year);
+   }else {
+    console.log("Given year is not leap year:",year);
+   }
+
+//    let nums = 56785462987829023
+// //   let numss = 
+// //   if(given nj)
+// console.log(nums.toString().length)
+// let xx=prompt("Enter the number")
+// console.log(xx);
+// let userInput;
+// do {
+//     userInput = parseInt(prompt("Enter a number:"))
+// }
+// while (isNaN(userInput))
+// console.log("you entered:",userInput)
+// let randomNumber;
+// do {
+//     randomNumber=Math.random()
+//     console.log(randomNumber)
+// }
+// while(randomNumber<=0.6)
+// let playAgain;
+// do{
+//     console.log("Playing the game:");
+//     playAgain=(confirm("Do you want to play again?"))
+// }
+// while(playAgain)
+// console.log("Game over")
+const number2 = [1,3,5,6,7,9,10]
+let firstEven = "";
+for (const num of number2) {
+    if(num%2===0) {
+        firstEven = num;
+        break;
+    }
+}
+
+console.log("The first even number is:" , firstEven)
+const arr = [1,2,3,4,5,6]
+for (let val of arr){
+    console.log(val)
+    if (val ==4) {
+        break;
+    }
+}
+
+let number4 = 2;
+do {
+    console.log(number4);
+    number4+=2;
+}
+while(number4<=10);
+
+const Num = [1,2,3,4,5,6,7,8,9,10]
+for (const num of Num) {
+    if(num%2==0){
+        continue;
+    }
+    console.log(num)
+}
+let numser = 11;
+let isPrime = true;
+while(true) {
+    for(let i=2; i<=Math.sqrt(numser);i++){
+        if(numser%i===0){
+            isPrime= false;
+             break;
+        }
+    }
+    if(isPrime) {
+        console.log("The first prime no is greater than 10 is",numser);
+        break;
+    }
+    number++;
+    isPrime=true;
+}
+const name = "Abi";
+console.log(`Hello,${name}`)
+const aa = 10;
+const bb = 20;
+console.log(`The sum of ${aa} and ${bb} is ${aa+bb}`)
+
+multipleString = `This is multiple string. It can span multiple line`
+console.log(multipleString);
+const firstName = "Abi";
+const secondName = "Prasanna";
+console.log(`My name is ${firstName}${secondName}`)
+
+const original =[1,2,3,4];
+const copy = [...original];
+console.log(copy);
+
+function sum(x,y,z) {
+    return x+y+z;
+}
+const numm = [1,2,3];
+console.log(sum(...numm))
+const person = {
+    name :"Abi", age: "27",
+    }
+    const newperson = {...person, country:"india"}
+    console.log(newperson);
+     
+</script>
+</html>

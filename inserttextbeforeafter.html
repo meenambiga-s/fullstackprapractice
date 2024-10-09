@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>insertAdjacentText Example</h1>
+    <button onclick="inserTextBeforeBegin()">Insert Text Before Begin</button>
+    <button onclick="inserTextAfterBegin()">Insert Text After Begin</button>
+    <button onclick="inserTextBeforeEnd()">Insert Text Before End</button>
+    <button onclick="inserTextAfterEnd()">Insert Text After End</button>
+<div id="targetElement">
+    <p>This is the target element.</p>
+</div>
+<script>
+    function inserTextBeforeBegin(){
+        const targetElement= document.getElementById('targetElement');
+        targetElement.insertAdjacentText('beforebegin','Text inserted before begin.');
+    }
+    function inserTextAfterBegin(){
+        const targetElement= document.getElementById('targetElement');
+        targetElement.insertAdjacentText('afterbegin','Text inserted before begin.');
+    }
+    function inserTextBeforeEnd(){
+        const targetElement= document.getElementById('targetElement');
+        targetElement.insertAdjacentText('beforeend','Text inserted before begin.');
+    }function inserTextAfterEnd(){
+        const targetElement= document.getElementById('targetElement');
+        targetElement.insertAdjacentText('afterend','Text inserted before begin.');
+    }
+</script>
+</body>
+</html>

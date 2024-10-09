@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 300px;
+            height: 300px;
+            border: 3px solid ;
+            background: url(./vegtables/beetroot.jpeg);
+            background-size: cover;
+
+        }
+         .box4{
+            width: 300px;
+            height: 300px;
+            border: 3px solid ;
+            background: url(./vegtables/chilli.jpeg);
+            background-size: cover;
+            
+        } 
+        .box2, .box3{
+            width: 300px;
+            height: 300px;
+            background-color: yellow;  
+            border: 2px solid ;
+
+        }
+        .parent1{
+              /* display: grid;  */
+             /*grid-template-columns: 20% 20% 20% 20% 20%;  */
+            /* gap: 20px; */
+            /* grid-template-rows: 400px 400px; */
+             display: flex; 
+             justify-content: space-around;   
+              /* flex-wrap: wrap;  */
+            /* flex-direction: row-reverse;  */
+             /* display: grid; 
+            grid-template-columns: 50% 50%;
+             gap: 50px;  */
+        }
+        .parent2{
+            display: flex; 
+             justify-content: space-around;
+        }
+         
+    </style>
+</head>
+<body>
+    <div class="parent1">
+        
+    <div class="box1"></div>
+    <div class="box2">Beetroot is a root vegetable also known as Beta vulgaris rubra or red beetroot. Vibrant red or gold beetroot has been planted everywhere from the ancient Mediterranean to George Washington's Mount Vernon. In modern times, hybrid species of beets even have candy-cane stripes of red and white.</div>
+</div>
+<div class="parent2">
+    <div class="box3">Chili peppers, also spelled chile or chilli, are varieties of the berry-fruit of plants from the genus Capsicum, which are members of the nightshade family Solanaceae, cultivated for their pungency. Chili peppers are widely used in many cuisines as a spice to add "heat" to dishes.</div>
+    <div class="box4"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dd{
+            background-color: red;
+        }
+        .jj{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <form action="" onsubmit="handlesubmit(event)">
+        <label for="">First name:</label>
+        <input type="text" placeholder="Enter first name" onchange="greek(event)" onmouseover="this.style.backgroundColor='skyblue'" onmouseout="this.style.backgroundColor='white'" name="fname" id="fname" ><br><br>
+        <label for="">Last name:</label>
+        <input type="text" placeholder="Enter last name"  onchange="greek(event)" onmouseover="this.style.backgroundColor='skyblue'" onmouseout="this.style.backgroundColor='white'" name="lname" id="lname" ><br><br>
+        <label for="">Date of Birth:</label>
+       <input type="date" id="dob"  onchange="greek(event)" onmouseover="this.style.backgroundColor='skyblue'" onmouseout="this.style.backgroundColor='white'" name="birthdate"><br><br>
+       <label for="">Gender :</label>
+       <input type="radio" name="gender" onchange="greek(event)" onmouseover="this.style.backgroundColor='skyblue'" onmouseout="this.style.backgroundColor='white'" value="Male" id="one"><label for="one">Male</label>
+       <input type="radio" name="gender" onchange="greek(event)" onmouseover="this.style.backgroundColor='skyblue'" onmouseout="this.style.backgroundColor='white'"  value="Female" id="two"><label for="two">Female</label><br><br>
+        <label for="">Phone no:</label>
+       <input type="number" placeholder="Enter phone no"  onchange="greek(event)" onmouseover="this.style.backgroundColor='skyblue'" onmouseout="this.style.backgroundColor='white'"  name="phnno" id="phnno"><br><br>
+      
+       <label for="">Language:</label>
+        <input type="checkbox"  name="language" id="" value="Tamil" onchange="getCheckValues()" ><label for="language"> Tamil</label>
+        <input type="checkbox"  name="language" id="" value="English" onchange="getCheckValues()"><label for="language"> English</label>
+        <input type="checkbox"  name="language" id="" value="Hindi" onchange="getCheckValues()" ><label for="language">Hindi</label><br><br>
+        <label for="">Email ID:</label>
+        <input type="email" placeholder="Enter email Id"  onchange="greek(event)" onmouseover="this.style.backgroundColor='skyblue'" onmouseout="this.style.backgroundColor='white'"  name="email" id="emailid"><br><br>
+        <label for="">Address</label>
+        <textarea   onchange="greek(event)" onmouseover="this.style.backgroundColor='skyblue'" onmouseout="this.style.backgroundColor='white'"  id="address" name="address" cols="30" rows="3"></textarea><br><br>
+        <input type="submit" id="submit" onchange="greek(event)" value="submit">
+    </form>
+    <table id="table" border = "1">
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>Phone No</th>
+            <th>Language</th>
+            <th>Email ID</th>
+            <th>Address</th>
+        </tr>
+        
+    </table>
+    <!-- <div id="cc" class="dd">
+        asdkllkwertyu
+    </div>
+    <button id="btn">click</button>
+     -->
+</body>
+<script>
+    //  const a=document.getElementById('cc')
+    // const btn=document.getElementById('btn')
+
+    // btn.addEventListener('click',()=>{
+    //     a.classList.remove('dd','jj')
+    // })
+    let obj={}
+    function greek(event) {
+        obj[event.target.name] = event.target.value
+    //   console.log(obj)
+    }
+    function getCheckValues() {
+      let list = document.getElementsByName('language');
+      let selected=[];
+
+      for(let i=0; i<list.length; i++)
+      {
+        if(list[i].checked){
+            selected.push(list[i].value);
+            select = selected.join(",");
+            obj["language"] = select;
+        }
+       
+      }
+ 
+    }
+    function handlesubmit(event){
+        event.preventDefault()
+    const table=document.getElementById("table")
+     const tr=document.createElement("tr")
+     const fname=document.createElement("td")
+     fname.textContent=obj["fname"]
+     tr.appendChild(fname)
+     const lname=document.createElement("td")
+     lname.textContent=obj["lname"]
+     tr.appendChild(lname)
+     const dob=document.createElement("td")
+     dob.textContent=obj["birthdate"]
+     tr.appendChild(dob)
+     const gender=document.createElement("td")
+     gender.textContent=obj["gender"]
+     tr.appendChild(gender)
+     const phnno=document.createElement("td")
+     phnno.textContent=obj["phnno"]
+     tr.appendChild(phnno)
+     const lang=document.createElement("td")
+     lang.textContent=obj["language"]
+     tr.appendChild(lang)
+     const email=document.createElement("td")
+     email.textContent=obj["email"]
+     tr.appendChild(email)
+     const address=document.createElement("td")
+     address.textContent=obj["address"]
+     tr.appendChild(address)
+     table.appendChild(tr)
+
+     
+    }
+    // function getCheckValues() {
+    //     const checkboxes = document.querySelectorAll('input[name = "language"]:checked');
+    //      const values=[];
+    //      checkboxes.forEach(function(checkbox) {
+    //         values.push(checkbox.value);
+    //      });
+    //    console.log(`selected values: ${values.join(',')}`);
+    // }
+    
+    var form=document.querySelector('form')
+    form.addEventListener("submit",handleSubmit)
+    function handleSubmit(event){
+     event.preventDefault()
+     let formData = new FormData(form)
+     let data = Object.fromEntries(formData)
+     fetch("http://localhost:3000/data",{
+        method : "post",
+        headers : {
+            'content-Type' : 'application/json'
+        },
+        body : JSON.stringify(data)
+     })
+     .then(response =>response.json())
+     .then(data=>console.log(data))
+     .catch(error=>console.error("Error:",error))
+    }
+    var btn = document.getElementById("btn")
+    function getData(event) {
+        event.preventDefault()
+        let obj = new obj(form)
+        let data = Object.fromEntries(obj)
+        fetch("http://localhost:3000/data/",{
+            method : "GET"
+        })
+        .then(response=>response.json())
+        .then(data=>console.log(data))
+        .catch(error=>console.error("Error",error))
+    }
+
+    
+   
+   
+</script>
+</html>

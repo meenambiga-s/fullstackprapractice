@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #tableData{
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <table id="tableData" border="2">
+        <!-- <tr>
+         <th>S.no</th>
+         <th>Name</th>
+         <th>Age</th>
+        </tr> -->
+        <!--  <tr>
+        <td>1</td>
+         <td>Meena</td>
+         <td>26</td> 
+        </tr>   -->
+ </table> 
+ 
+</body>
+<script>
+    const sno = "1";
+    const name = "Meena";
+    const age = "26";
+    const sno1 = "2";
+    const name1 = "Meena";
+    const age1 = "26";
+    const sno2 = "1";
+    const name2 = "Meena";
+    const age2 = "26";
+
+//     const tableData = document.getElementById("tableData");
+//     tableData.style.display="none";
+//   addTaskBtn.addEventListener('click',function() {
+//    tableData.style.display = "block";
+// //         const row = document.innerHTML(``);
+
+
+document.getElementById("tableData").innerHTML = (`<tr><th>S.no</th><th>Name</th><th>Age</th></tr><tr><td>${sno}</td><td>${name}</td><td>${age}</td></tr><tr><td>${sno1}</td><td>${name1}</td><td>${age1}</td></tr>`);
+//  });
+</script>
+</html>
