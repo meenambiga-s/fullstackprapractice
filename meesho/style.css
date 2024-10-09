@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+}
+img{
+    width: 120%;
+}
+.header{
+    height: 72px;
+    outline: 1.5px solid rgba(173, 168, 168, 0.628);
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+}
+.logoContainer{
+     width: 155px;
+}
+.searchInputcontainer{
+    width: 400px;
+    height: 45px;
+    outline: 1px solid gainsboro;
+    display: flex;
+    margin-left: 25px;
+    border-radius: 3px;
+    align-items: center;
+    padding: 7px;
+}
+.searchIcon{
+    width: 15px;
+    margin: 6px;
+}
+.inputSearch{
+   width: 100%;
+   border: none;
+   outline: none;
+}
+.navbar {
+     font-size: 20px;
+}
+.parent{
+    display: none;
+}
+.child {
+    display: flex;
+}

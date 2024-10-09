@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping Site for Fashion, Electronics, Home & more| Meesho</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="icon" href="image/meeshfevicon.png">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+   *{
+        margin: 0px;
+       }
+      .whole{
+        background-color: rgba(29, 103, 194, 0.813);
+        color: white;
+        font-family: Verdana;
+        height: 200vh;
+      }
+       .container{
+        background-color: rgba(105, 224, 245, 0.925);
+        /* position: fixed; */
+        top: 0px;
+        width: 100%;
+        }  
+      
+        ul{
+            float: right;
+        }
+        li{
+            display: inline-block;
+            padding: 35px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        label{
+            margin-left: 80px;
+            line-height: 90px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+       .container{
+            display: flex; 
+            justify-content: space-around; 
+        } 
+        .parent{
+          background-color: rgba(105, 224, 245, 0.925);
+          display: none;
+         
+        }
+       .child{
+        display: flex;
+        justify-content: space-around;
+
+       }
+     
+</style>
+  </head>
+<body>
+     
+              <div class="container">
+               <nav>
+                   <label for="">Meesho</label>
+                  <ul>
+                   <li id="women"> Women Ethnic</li>
+                   <li>Women Western</li>
+                   <li>Men</li>
+                   <li>Kids</li>
+                   <li> Beauty & Health</li>
+                  </ul>
+               </nav>
+        
+       </div>
+    
+          <div class="parent">
+            <div class="child">
+            <div>
+              <h4>Saree</h4>
+              <p>All Sarees</p>
+              <p>Silk Sarees</p>
+              <p>Cotton Sarees</p>
+              <p>Cotton Silk Sarees</p>
+              <p>Satin Sarees</p>
+            </div>
+           
+
+         
+          <div class="saree">
+            <div>
+              <h4>Kurtis</h4>
+               <p>All Kurtis</p>
+               <p>Anarkali Kurtis</p>
+               <p>Rayon Kurtis</p>
+               <p>Cotton Kurtis</p>
+              </div>
+          </div>
+          <div class="saree1">
+            <div>
+            <h4>Kurta Sets</h4>
+            <p>All Kurta Sets</p>
+          </div>
+       </div>
+       <div class="saree2">
+        <div>
+        <h4>Suits & Sress Material</h4>
+        <p>All Suits & Dress Materials</p>
+        <p>Cotton Suits</p>
+       </div>
+      </div>
+      </div>
+    </div>
+ 
+
+    <script>
+$(document).ready(function(){
+  $('#women').mouseenter(function(){
+    $(".parent").fadeIn()
+  })
+  $('#women').mouseout(function(){
+    $('.parent').fadeOut()
+  })
+})
+      
+    </script>
+</body>
+</html>
