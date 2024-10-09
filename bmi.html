@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   div1{
+    justify-content: center;
+   }    
+body {
+  background-color: #efd5d5;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+     }   
+
+.container {
+  max-width: 300px;
+  margin-left: 400px;
+  padding: 20px;
+  border: #220202;
+  border-radius: 80px;
+  text-align: center;
+}
+
+h1 {
+  color: #220202;
+}
+
+.input-container {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+    </style>
+</head>
+<body>
+  <div class="div1">
+    <div class="container">
+        <h1>BMI CALCULATOR</h1>
+        <div class="input-container">
+        <label for="height">Height:</label>
+        <input type="number" id="height" placeholder="Height (cm)">
+        </div>
+        <div class="input-container">
+        <label for="weight">Weight:</label>
+        <input type="number" id="weight" placeholder="weight (kg)">
+        </div>
+       <button onclick="calculateBMI()">Calculate</button>
+        <div id="result"></div>
+    </div>
+  </div>
+</body>
+<script>
+    function calculateBMI() {
+    var heightInput = document.getElementById("height");
+    var weightInput = document.getElementById("weight");
+    var resultOutput = document.getElementById("result");
+
+    var height = parseFloat(heightInput.value);
+    var weight = parseFloat(weightInput.value);
+
+     if(isNaN(height) || isNaN(weight)) {
+         resultOutput.innerHTML = "<b>Please enter valid height and weight</b>";
+        return;
+     }
+
+     var bmi = weight / ((height/100)**2);
+      var category ="";
+
+   if(bmi < 18.5) {
+    category ="Underweight";
+   }  else if(bmi < 25)  {
+    category = "Normalweight";
+   } else if (bmi > 30) {
+    category = "Overweight";
+   } else {
+    category = "Obese";
+   }
+   resultOutput.innerHTML = `Your BMI is ${bmi.toFixed(2)} ${category}`;
+    }
+
+</script> 
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .design{
+            background-color: aqua;
+           color: black;
+        }
+        .color{
+            background-color: pink;
+            color: black;
+        }
+        
+    </style>
+</head>
+<body>
+  <div id="active"></div>
+    <button id="btn">click</button>
+    <button id="btn1">color change</button>
+</body>
+
+<script>
+        const div=document.getElementById('active') 
+        const button=document.getElementById('btn')
+        const btn1=document.getElementById('btn1')
+        button.addEventListener('click',()=>{
+            const a=document.createElement("h1");
+            a.textContent="HIIIIIIIIIIIIIIIIIIIIIII";
+            a.className='design'
+            div.appendChild(a)
+btn1.addEventListener('click',()=>{
+    a.classList.replace('design','color')
+    // a.className='color'
+
+})           
+        })
+        
+</script>
+</html>

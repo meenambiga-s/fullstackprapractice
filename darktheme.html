@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        padding: 25px;
+        background-color: white;
+        color: black;
+        font-size: 25px;
+      }
+       button{
+            background-color: black;
+            color: white;
+            padding: 20px;
+            cursor: pointer;
+            border-radius: 50px;
+            width: 10vw;
+       }
+       
+       .button1{
+             background-color: aliceblue;
+             color: black;
+       }
+         
+
+      .dark-mode {
+        background-color: black;
+        color: white;
+      }
+
+
+    </style>
+</head>
+<body>
+   <!-- <div id="myDiv"> -->
+    <h1>Dark Theme & Light Theme</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis itaque, tempora eaque, suscipit ut accusamus assumenda perferendis cum, rerum placeat voluptas explicabo unde nulla sed harum aperiam et! Nesciunt, fugiat.</p>
+  
+    <button id = "btm" onclick="darkMode()">Dark Mode</button>
+<!-- </div> -->
+</body>
+
+<script>
+    function darkMode() {
+     var darkMode = document.body;
+    
+        const btn=document.getElementById('btm')
+
+     darkMode.classList.toggle("dark-mode");
+
+     if(btn.textContent=="Dark Mode"){
+      btn.textContent="Light Mode"
+      btn.className="button1"
+     }
+     else{
+      btn.textContent="Dark Mode"
+      btn.className="button"
+     }
+    
+    }
+</script>
+</html>
