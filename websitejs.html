@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    
+
+<script>
+    // const div4 = document.createElement("div")
+    const div = document.createElement("div")
+    div.style.background="linear-gradient(rgb(51, 199, 240),rgb(87, 60, 240))"
+
+    
+    div.style.fontFamily="Verdana"
+    div.style.backgroundColor="rgba(105, 224, 245, 0.925)"
+    div.style.position="fixed";
+    div.style.top="0px"
+    div.style.right="0px"
+    div.style.width="100%"
+    
+    const nav = document.createElement("nav")
+    
+    const label = document.createElement("label")
+    label.textContent="Modern Website"
+    label.style.marginLeft="80px"
+    label.style.lineHeight="90px"
+    label.style.fontSize="25px"
+    label.style.fontWeight="bold"
+    
+    const ul = document.createElement("ul")
+     ul.style.float="right"
+     ul.style.paddingTop="20px"
+    const li1 = document.createElement("li")
+    li1.textContent="HOME" 
+        li1.style.display="inline"
+        li1.style.padding="35px"
+        li1.style.fontSize="15px"
+    const li2 = document.createElement("li")
+    li2.textContent="SERVICES"
+    li2.style.display="inline"
+        li2.style.padding="35px"
+        li2.style.fontSize="15px"
+    const li3 = document.createElement("li")
+    li3.textContent="ABOUTUS"
+    li3.style.display="inline"
+        li3.style.padding="35px"
+        li3.style.fontSize="15px"
+    const li4 = document.createElement("li")
+    li4.style.display="inline"
+        li4.style.padding="35px"
+        li4.style.fontSize="15px"
+    li4.textContent="CONTACTUS"
+    const div1 = document.createElement("div")
+    div1.style.justifyContent="space-evenly"
+    div1.style.display="flex"
+    div1.style.width="100vw"
+    div1.style.height="100vh"
+    div1.style.paddingTop="70px"
+    const div2 = document.createElement("div")
+    div2.style.width="40%"
+    div2.style.height="80%"
+    const img = document.createElement("img")
+    img.src="images/web.png"
+    img.style.width="70%"
+    img.style.height="60%"
+    const div3 = document.createElement("div")
+    div3.style.textAlign="center"
+    const h1=document.createElement("h1")
+    h1.textContent="OUR MODERN WEBSITE"
+    const p=document.createElement("p")
+    p.textContent="We are the best website developer company"
+    const btm = document.createElement("button")
+    btm.textContent="welcome"
+    btm.style.fontSize="20px"
+    btm.style.marginLeft="10px"
+    btm.style.marginTop="5%"
+    btm.style.padding="10px 15px 10px 15px"
+    btm.style.border="none"
+    btm.style.borderRadius="25%"
+    btm.style.background="linear-gradient(rgb(51, 199, 240),rgb(87, 60, 440))"
+    btm.style.cursor="pointer"
+    
+
+
+    
+//     const para = document.createElement("p");
+// para.innerText = "This is a paragraph.";
+
+// Append to body:
+// document.body.appendChild(para);
+
+document.body.appendChild(div);
+div.appendChild(nav);
+nav.appendChild(label);
+nav.appendChild(ul);
+ul.appendChild(li1);
+ul.appendChild(li2);
+ul.appendChild(li3);
+ul.appendChild(li4);
+div.appendChild(div1)
+div1.appendChild(div2);
+div2.appendChild(img);  
+div1.appendChild(div3);
+div3.appendChild(h1);
+div3.appendChild(p);
+div3.appendChild(btm);
+
+
+
+
+
+
+</script>
+</body>
+</html>

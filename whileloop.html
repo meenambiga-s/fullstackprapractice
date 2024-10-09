@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let count = 1
+    while(count<=10) {
+        console.log(count)
+        count++;
+    }
+ let sum = 0
+ let num = 1
+ while(num<=10) {
+    sum+=num;
+    num++;
+ }
+ console.log("sum of numbers from 1 to 100 :",sum);
+let text ="hello";
+let repetitions = 6;
+let output = "";
+while(repetitions>0){
+    output += text;
+    repetitions--;
+}
+console.log(output);
+let  number = 5;
+let factorial = 1;
+let i = 1;
+while(i<=number) {
+    factorial*=
+        i++;
+    }
+    console.log("Factorial of a",number,"is",factorial);
+ const person ={
+     name : "john",
+     age : 26,
+     city : "newyork"
+ }
+ for (let key in person) {
+    console.log(key+":"+person[key])
+ }
+ const colors=['red' , 'green' , 'blue']
+ for(let index in colors) {
+    console.log(colors[index]);
+ }
+ const car = {
+    name : "abi",
+    tamil : 89,
+    english : 88,
+    maths : 99
+ }
+ let totalmark = 0;
+ for (let key in car){
+    if (typeof car[key]==="number"){
+        totalmark+=car[key];
+    }
+ }
+ console.log("total mark:",totalmark)
+ const sentence ="Hello world";
+ for (let index in sentence){
+    console.log(sentence[index])
+ }
+ const computer = {
+    brand : "Dell",
+    model : "xp234",
+    processor : "inteli7",
+    memory : "16gb"
+ }
+ let counts = 0
+ for (let key in computer){
+    counts++;
+ }
+ console.log("Number of properties in computer object : " ,counts)
+ const number1 = [1,2,3,4,5,6] 
+ for (const number of number1) {
+    console.log(number)
+ }
+ const word = "Javascript"
+ for (const char of word) {
+    console.log(char)
+ }
+ const mySet = new Set([1,2,3,4,5])
+ for (const value of mySet) {
+    console.log(value)
+ }
+ const myMap = new Map()
+ myMap.set ("a", 1);
+ myMap.set ("b", 2);
+ myMap.set ("c", 3);
+ for(const [key , value] of myMap) {
+   console.log(key , value);
+ }
+ </script>
+</html>

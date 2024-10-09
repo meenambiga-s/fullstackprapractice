@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="tableData" border="1">
+           <tr>
+            <th>S.no</th>
+            <th>Name</th>
+            <th>Age</th>
+           </tr>
+           <tr>
+            <td>1</td>
+            <td>Meena</td>
+            <td>26</td>
+           </tr>
+    </table> 
+    <button id="addTaskBtn" >Click here</button>
+</body>
+<script>
+    const tableData = document.getElementById("tableData");
+    tableData.style.display="none";
+  addTaskBtn.addEventListener('click',function() {
+    tableData.style.display = "block";
+        const row = document.createElement("tr");
+        row.textContent =tableData;
+})
+</script>
+</html>
