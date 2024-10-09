@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+        .container{
+            /* text-align: center; */
+            display: flex;
+            justify-content: center;
+             border: black;
+        }
+        .form{
+            
+             border: none;
+             border-bottom: 1px solid rgb(31, 158, 254);
+        }
+        label{
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+        .get{
+            display: flex;
+            justify-content: center;
+        }
+        table{
+            display: block;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <form action="" onsubmit="handlesubmit(event)">
+        <h1>Registration form</h1>
+        <label>Username:</label><input class="form" type="name"  id="username" placeholder="username"   onmouseover="this.style.backgroundColor='#eaf2f8'" onmouseout="this.style.backgroundColor='aliceblue'" ><br><span class="span1" id="span"></span><br>
+        <label>Email ID:</label><input class="form" type="emailid" id="emailid" placeholder="emailid"  onmouseover="this.style.backgroundColor='#eaf2f8'" onmouseout="this.style.backgroundColor='aliceblue'" name=""><br><br>
+        <label>Password:</label><input class="form"  type="password" id="password" placeholder="password"  onmouseover="this.style.backgroundColor='#eaf2f8'" onmouseout="this.style.backgroundColor='aliceblue'">
+       <br><br> <label>Submit:</label>   <input type="submit"  id="submit" value="submit"> 
+
+    </form>
+</div><br><br>
+<div class="get">
+    <div>
+     <button  id="get">click</button>
+
+</div>
+
+</div>
+<div>
+    <table id="table" border = "1">
+    <tr>
+        <th>Username</th>
+        <th>Email ID</th>
+        <th>Password</th>
+    </tr>
+     
+ </table>
+</div>
+    <script>
+        function handlesubmit(){
+            event.preventDefault()
+
+            const username = document.getElementById("username").value
+            const emailid = document.getElementById("emailid").value
+            const password = document.getElementById("password").value
+
+            const usernameregex = /^[a-zA-Z0-9]{5,15}$/;
+          const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+          const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+          if(!usernameregex.test(username)) {
+                    const targetElement = document.getElementById("span")
+                //     const targetElement = document.createElement("span")
+                //   targetElement.textContent="*please enter valid username"
+                //   targetElement.style.color="red"
+                const text="*please enter valid username"
+                   targetElement.insertAdjacentText('afterend', `${text}`);
+                    
+           
+          }
+          if(!emailRegex.test(emailid)) {
+            //    alert("please enter valid EmailID")
+          }
+          
+          if(!passwordRegex.test(password)) {
+
+            //    alert("please enter valid Password")
+          }
+        //   const form = document.querySelector('form')
+        //   const thankyouMessage = document.querySelector('#thank-you-message')
+          localStorage.setItem('username',username)
+          localStorage.setItem('emailid',emailid)
+          localStorage.setItem('password',password)
+
+          const btn1 = document.getElementById("get")
+          btn1.addEventListener('click',function(){
+            const username1 = localStorage.getItem('username',username)
+            const emailid1 = localStorage.getItem('emailid',emailid)
+            const password1 = localStorage.getItem('password',password)
+            
+            console.log(username1);
+            console.log(emailid1);
+            console.log(password1);
+            
+            const table=document.getElementById("table")
+     const tr=document.createElement("tr")
+     const uname=document.createElement("td")
+     uname.textContent=username1
+     console.log(uname);
+     tr.appendChild(uname)
+     const email=document.createElement("td")
+     email.textContent=emailid1
+     console.log(email);
+     tr.appendChild(email)
+     const psword=document.createElement("td")
+     psword.textContent=password1
+     console.log(psword);
+     tr.appendChild(psword)
+     table.appendChild(tr)
+          })
+    
+         
+       
+
+        }
+    </script>
+</body>
+</html>
